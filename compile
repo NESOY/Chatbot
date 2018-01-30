@@ -1,1 +1,1 @@
-javac *.java
+javac -d . -cp lib/json-simple-1.1.1.jar command/*.java inputSchema/*.java outputSchema/*.java parseSchema/*.java *.java
