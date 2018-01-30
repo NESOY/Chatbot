@@ -1,6 +1,6 @@
 {
   "command": {
-      "날씨": "WeatherCommand",
-      "날짜": "DateCommand",
+      "weather": "WeatherCommand",
+      "date": "DateCommand",
   },
 }

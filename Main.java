@@ -7,15 +7,15 @@ import command.*;
 
 public class Main{
     public static void main(String args[]) {
-      System.out.println("Hello Chat Bot World"); // remove
-      System.out.println("====================");
+      ConfigParser configParser = new ConfigParser("config/config.json");
 
         while(true){
           Input input = new ShellInput();
           String command = input.readCommand();
 
-          CommandParser commandParser = new CommandParser();
+          CommandParser commandParser = new CommandParser(configParser.getUsableCommandMap());
           commandParser.setSchemaInterface(new SpaceSchema());
+
 
           CommandInterface parsedCommand = commandParser.parse(command);
           parsedCommand.execute();

@@ -3,11 +3,13 @@ package command;
 import java.util.*;
 
 public class WeatherCommand implements CommandInterface{
+  private String command;
   private Map<String, List<Double>> weatherInfo = new HashMap<String, List<Double>>();
   private List<String> result;
   private List<String> args;
 
-  public WeatherCommand(){
+  public WeatherCommand(String command){
+    this.command = command;
     initWeatherData();
   }
 
@@ -23,7 +25,7 @@ public class WeatherCommand implements CommandInterface{
 
   @Override
   public boolean isCommand(List<String> commendList){
-    return commendList.contains("날씨");
+    return commendList.contains(command);
   }
 
   @Override

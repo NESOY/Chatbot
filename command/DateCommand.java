@@ -4,12 +4,17 @@ import java.util.*;
 import java.time.*;
 
 public class DateCommand implements CommandInterface{
+  private String command;
   private List<String> args;
   private List<String> result;
 
+  public DateCommand(String command){
+    this.command = command;
+  }
+
   @Override
   public boolean isCommand(List<String> commendList){
-    return commendList.contains("날짜");
+    return commendList.contains(command);
   }
 
   @Override

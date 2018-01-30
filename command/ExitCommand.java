@@ -3,12 +3,17 @@ package command;
 import java.util.*;
 
 public class ExitCommand implements CommandInterface{
+  private String command;
   private List<String> args;
   private List<String> result;
 
+  public ExitCommand(String command){
+    this.command = command;
+  }
+
   @Override
   public boolean isCommand(List<String> commendList){
-    return commendList.contains("종료");
+    return commendList.contains(command);
   }
 
   @Override

@@ -48,7 +48,7 @@ public class ConfigParser{
       }
   }
 
-  public Map<String, String> getCommandMap(){
+  public Map<String, String> getUsableCommandMap(){
     return this.commandMap;
   }
 }
