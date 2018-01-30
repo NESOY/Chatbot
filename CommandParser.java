@@ -25,14 +25,13 @@ public class CommandParser{
     return new EmptyCommand();
   }
 
-
-  public void setSchemaInterface(SchemaInterface schemaInterface){
-    this.schemaInterface = schemaInterface;
-  }
-
-  private void registerCommands(){
+  private void registerCommands(){ //Todo reflation
     commandList.add(new WeatherCommand());
     commandList.add(new DateCommand());
     commandList.add(new ExitCommand());
+  }
+
+  public void setSchemaInterface(SchemaInterface schemaInterface){
+    this.schemaInterface = schemaInterface;
   }
 }
