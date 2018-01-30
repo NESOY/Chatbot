@@ -7,7 +7,7 @@ public class EmptyCommand implements CommandInterface{
   private List<String> result;
 
   @Override
-  public boolean isCommand(List commendList){
+  public boolean isCommand(List<String> commendList){
     return false;
   }
 

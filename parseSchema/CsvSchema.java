@@ -5,7 +5,7 @@ import command.*;
 
 public class CsvSchema implements SchemaInterface{
 
-  public List parse(String command){
+  public List<String> parse(String command){
     List<String> argsList = new ArrayList<String>();
 
     for(String commandToken : command.split(",")){

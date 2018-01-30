@@ -8,7 +8,7 @@ public class DateCommand implements CommandInterface{
   private List<String> result;
 
   @Override
-  public boolean isCommand(List commendList){
+  public boolean isCommand(List<String> commendList){
     return commendList.contains("날짜");
   }
 
@@ -27,7 +27,7 @@ public class DateCommand implements CommandInterface{
     }
     return this.result;
   }
-  
+
   @Override
   public void setArgs(List<String> args){
     this.args = args;
