@@ -5,7 +5,7 @@ import outputSchema.*;
 import parseSchema.*;
 import command.*;
 
-public class Main{
+public class Runner{
     public static void main(String args[]) {
       ConfigParser configParser = new ConfigParser("config/config.json");
 
