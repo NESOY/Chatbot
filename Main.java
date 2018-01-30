@@ -11,7 +11,7 @@ public class Main{
       System.out.println("====================");
 
         while(true){
-          InputInterface input = new ShellInput(); // Input
+          Input input = new ShellInput();
           String command = input.readCommand();
 
           CommandParser commandParser = new CommandParser();
@@ -20,7 +20,7 @@ public class Main{
           CommandInterface parsedCommand = commandParser.parse(command);
           parsedCommand.execute();
 
-          OutputInterface output = new ShellOutput(); //Output
+          Output output = new ShellOutput(); //Output
           output.print(parsedCommand.getResult());
         }
     }

@@ -2,6 +2,6 @@ package inputSchema;
 
 import java.util.*;
 
-public interface InputInterface{
+public interface Input{
   public String readCommand();
 }

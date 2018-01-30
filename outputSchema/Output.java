@@ -2,6 +2,6 @@ package outputSchema;
 
 import java.util.*;
 
-public interface OutputInterface{
+public interface Output{
   public void print(List<String> result);
 }

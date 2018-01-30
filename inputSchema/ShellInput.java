@@ -3,7 +3,7 @@ package inputSchema;
 import java.util.*;
 import command.*;
 
-public class ShellInput implements InputInterface{
+public class ShellInput implements Input{
   private Scanner scanner = new Scanner(System.in);
 
   public String readCommand(){
