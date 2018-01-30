@@ -15,7 +15,7 @@ public class EmptyCommand implements CommandInterface{
   public void execute(){
     result = new ArrayList<String>();
 
-    result.add(new String("없는 명령어 입니다."));
+    result.add(new String("없는 명령어 입니다.")); //Todo Magic Number
   }
 
   @Override

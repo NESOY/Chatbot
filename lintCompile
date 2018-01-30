@@ -1,1 +1,1 @@
-javac -d . -cp lib/json-simple-1.1.1.jar command/*.java inputSchema/*.java outputSchema/*.java parseSchema/*.java *.java -Xlint
+javac -d . -cp lib/json-simple-1.1.1.jar command/*.java inputSchema/*.java outputSchema/*.java parseSchema/*.java parser/*.java *.java -Xlint

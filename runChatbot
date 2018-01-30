@@ -1,1 +1,1 @@
-java -cp lib/json-simple-1.1.1.jar: Main
+java -cp lib/json-simple-1.1.1.jar: Runner

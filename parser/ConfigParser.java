@@ -1,3 +1,5 @@
+package parser;
+
 import java.util.*;
 import java.io.*;
 
@@ -10,6 +12,7 @@ import command.*;
 import parseSchema.*;
 
 public class ConfigParser{
+  private final static String COMMAND = "command";
   private static String configLocation;
   private JSONParser parser = new JSONParser();
   private Map<String, String> commandMap;
@@ -26,11 +29,10 @@ public class ConfigParser{
     initCommandConfig();
   }
 
-  private void initCommandConfig(){
+  private void initCommandConfig(){ // todo Refactor
       try {
-          //todo naming
           JSONObject configObject = (JSONObject) parser.parse(new FileReader(configLocation));
-          JSONObject commandArray = (JSONObject) configObject.get("command"); //todo remove Magic Number
+          JSONObject commandArray = (JSONObject) configObject.get(COMMAND);
 
           Set<String> commandSet = commandArray.keySet();
 

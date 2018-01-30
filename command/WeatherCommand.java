@@ -65,7 +65,7 @@ public class WeatherCommand implements CommandInterface{
     return temperList;
   }
 
-  private String getLocation(){ //Todo
+  private String getLocation(){ //todo refactor
     for(String location : args){
       if(location.equals("서울")){
         return "서울";

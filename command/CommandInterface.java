@@ -1,4 +1,5 @@
 package command;
+
 import java.util.*;
 
 public interface CommandInterface{
