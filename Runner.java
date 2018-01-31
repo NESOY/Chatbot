@@ -1,21 +1,26 @@
 import java.util.*;
 
+import org.json.simple.JSONObject;
+
 import inputSchema.*;
 import parseSchema.*;
 import command.*;
 import outputSchema.*;
-
 import parser.*;
 
 
 
 public class Runner{
     public static void main(String args[]) {
-      ConfigParser configParser = new ConfigParser("config/config.json");
+      Input jsonConfigInput = new JSONConfigInput("config/config.json");
+      JSONObject configObject = (JSONObject) jsonConfigInput.read();
+
+      ConfigParser configParser = new ConfigParser();
+      configParser.parse(configObject);
 
       while(true){
-        Input input = new ShellInput();
-        String command = input.readCommand();
+        Input shellCommandinput = new ShellCommandInput();
+        String command = (String) shellCommandinput.read();
 
         CommandParser commandParser = new CommandParser(configParser.getUsableCommandMap());
         commandParser.setSchemaInterface(new SpaceSchema());
@@ -24,8 +29,8 @@ public class Runner{
         CommandInterface parsedCommand = commandParser.parse(command);
         parsedCommand.execute();
 
-        Output output = new ShellOutput(); //Output
-        output.print(parsedCommand.getResult());
+        Output shellCommandOutput = new ShellCommandOutput();
+        shellCommandOutput.print(parsedCommand.getResult());
       }
     }
 }

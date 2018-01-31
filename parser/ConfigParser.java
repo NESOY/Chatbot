@@ -13,40 +13,26 @@ import parseSchema.*;
 
 public class ConfigParser{
   private final static String COMMAND = "command";
-  private static String configLocation;
-  private JSONParser parser = new JSONParser();
+  private String configLocation;
+
   private Map<String, String> commandMap;
 
-
-  public ConfigParser(String configLocation){
-    this.configLocation = configLocation;
+  public ConfigParser(){
     commandMap = new HashMap<String, String>();
-
-    initConfig();
   }
 
-  private void initConfig(){
-    initCommandConfig();
+  public void parse(JSONObject configObject){
+    parseCommandConfig(configObject);
   }
 
-  private void initCommandConfig(){ // todo Refactor
-      try {
-          JSONObject configObject = (JSONObject) parser.parse(new FileReader(configLocation));
-          JSONObject commandArray = (JSONObject) configObject.get(COMMAND);
+  private void parseCommandConfig(JSONObject configObject){
+      JSONObject commandArray = (JSONObject) configObject.get(COMMAND);
 
-          Set<String> commandSet = commandArray.keySet();
+      Set<String> commandSet = commandArray.keySet();
 
-          for(String commandName : commandSet){
-            String commandClassName = commandArray.get(commandName).toString();
-            commandMap.put(commandName,commandClassName);
-          }
-          //todo handle error
-      } catch (FileNotFoundException e) {
-          e.printStackTrace();
-      } catch (IOException e) {
-          e.printStackTrace();
-      } catch (ParseException e) {
-          e.printStackTrace();
+      for(String commandName : commandSet){
+        String commandClassName = commandArray.get(commandName).toString();
+        commandMap.put(commandName,commandClassName);
       }
   }
 

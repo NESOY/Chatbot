@@ -22,7 +22,7 @@ public class DateCommand implements CommandInterface{
     result = new ArrayList<String>();
 
     LocalDateTime currentTime = LocalDateTime.now();
-    result.add(new String("현재 날짜 : " + currentTime));
+    result.add(new String("현재 날짜 : " + currentTime)); // todo Refactor String -> Model
   }
 
   @Override

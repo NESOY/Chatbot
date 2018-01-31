@@ -2,5 +2,6 @@
   "command": {
       "weather": "WeatherCommand",
       "date": "DateCommand",
+      "exit": "ExitCommand",
   },
 }
