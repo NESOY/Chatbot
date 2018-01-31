@@ -40,7 +40,7 @@ public class CommandParser{
         String commandName = keys.next();
         String commandClassName = usableCommandMap.get(commandName);
 
-        Class commandClass = Class.forName("command." + commandClassName);
+        Class commandClass = Class.forName("command." + commandClassName); // todo remove Magic number
         Constructor cs = commandClass.getConstructor(new Class[]{String.class});
 
         commandList.add((CommandInterface)cs.newInstance(commandName));

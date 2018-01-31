@@ -13,7 +13,7 @@ public class WeatherCommand implements CommandInterface{
     initWeatherData();
   }
 
-  private void initWeatherData(){ //todo Extract File Data
+  private void initWeatherData(){ //todo File Data
     List<Double> seoulTemperList = Arrays.asList(-7.0, -8.0, -9.0, -8.0, -5.0);
     List<Double> busanTemperList = Arrays.asList(-5.0, -4.0, -6.0, -7.0, -1.0);
     List<Double> junjuTemperList = Arrays.asList(-3.0, -3.5, -4.0, -4.5, -5.0);

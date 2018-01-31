@@ -18,13 +18,12 @@ public class Runner{
       ConfigParser configParser = new ConfigParser();
       configParser.parse(configObject);
 
+      CommandParser commandParser = new CommandParser(configParser.getUsableCommandMap());
+      commandParser.setSchemaInterface(new SpaceSchema());
+
       while(true){
         Input shellCommandinput = new ShellCommandInput();
         String command = (String) shellCommandinput.read();
-
-        CommandParser commandParser = new CommandParser(configParser.getUsableCommandMap());
-        commandParser.setSchemaInterface(new SpaceSchema());
-
 
         CommandInterface parsedCommand = commandParser.parse(command);
         parsedCommand.execute();
