@@ -1,19 +1,13 @@
 package parser;
 
-import java.util.*;
-import java.io.*;
-
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
-import command.*;
-import parseSchema.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class ConfigParser{
   private final static String COMMAND = "command";
-  private String configLocation;
 
   private Map<String, String> commandMap;
 

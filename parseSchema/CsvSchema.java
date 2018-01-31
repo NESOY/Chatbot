@@ -1,7 +1,7 @@
 package parseSchema;
 
-import java.util.*;
-import command.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CsvSchema implements SchemaInterface{
 

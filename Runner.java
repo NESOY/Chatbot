@@ -1,12 +1,13 @@
-import java.util.*;
-
+import command.CommandInterface;
+import inputSchema.Input;
+import inputSchema.JSONConfigInput;
+import inputSchema.ShellCommandInput;
 import org.json.simple.JSONObject;
-
-import inputSchema.*;
-import parseSchema.*;
-import command.*;
-import outputSchema.*;
-import parser.*;
+import outputSchema.Output;
+import outputSchema.ShellCommandOutput;
+import parseSchema.SpaceSchema;
+import parser.CommandParser;
+import parser.ConfigParser;
 
 
 

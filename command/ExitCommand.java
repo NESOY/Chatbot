@@ -1,6 +1,7 @@
 package command;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
 
 public class ExitCommand implements CommandInterface{
   private String command;

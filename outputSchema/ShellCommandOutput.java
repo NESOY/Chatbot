@@ -1,7 +1,6 @@
 package outputSchema;
 
-import java.util.*;
-import command.*;
+import java.util.List;
 
 public class ShellCommandOutput implements Output{
   public void print(List<String> result){
