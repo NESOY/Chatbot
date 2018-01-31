@@ -1,7 +1,6 @@
-package inputSchema;
+package src.main.java.inputSchema;
 
 import java.util.*;
-import command.*;
 
 public class ShellCommandInput implements Input{
   private Scanner scanner = new Scanner(System.in);

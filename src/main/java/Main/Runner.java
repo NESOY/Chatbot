@@ -1,19 +1,21 @@
-import command.CommandInterface;
-import inputSchema.Input;
-import inputSchema.JSONConfigInput;
-import inputSchema.ShellCommandInput;
+package src.main.java.Main;
+
+import src.main.java.command.CommandInterface;
+import src.main.java.inputSchema.Input;
+import src.main.java.inputSchema.JSONConfigInput;
+import src.main.java.inputSchema.ShellCommandInput;
 import org.json.simple.JSONObject;
-import outputSchema.Output;
-import outputSchema.ShellCommandOutput;
-import parseSchema.SpaceSchema;
-import parser.CommandParser;
-import parser.ConfigParser;
+import src.main.java.outputSchema.Output;
+import src.main.java.outputSchema.ShellCommandOutput;
+import src.main.java.parseSchema.SpaceSchema;
+import src.main.java.parser.CommandParser;
+import src.main.java.parser.ConfigParser;
 
 
 
 public class Runner{
     public static void main(String args[]) {
-      Input jsonConfigInput = new JSONConfigInput("config/config.json");
+      Input jsonConfigInput = new JSONConfigInput("src/main/resources/config.json");
       JSONObject configObject = (JSONObject) jsonConfigInput.read();
 
       ConfigParser configParser = new ConfigParser();

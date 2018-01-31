@@ -1,4 +1,4 @@
-package command;
+package src.main.java.command;
 
 import java.util.ArrayList;
 import java.util.Collections;

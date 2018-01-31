@@ -1,8 +1,6 @@
-package inputSchema;
+package src.main.java.inputSchema;
 
 import java.io.*;
-import java.util.*;
-import command.*;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

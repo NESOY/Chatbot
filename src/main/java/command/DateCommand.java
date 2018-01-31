@@ -1,4 +1,4 @@
-package command;
+package src.main.java.command;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

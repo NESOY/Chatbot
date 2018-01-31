@@ -1,4 +1,4 @@
-package outputSchema;
+package src.main.java.outputSchema;
 
 import java.util.List;
 

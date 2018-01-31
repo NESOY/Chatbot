@@ -1,4 +1,4 @@
-package parseSchema;
+package src.main.java.parseSchema;
 
 import java.util.*;
 

@@ -1,11 +1,11 @@
-package parser;
+package src.main.java.parser;
 
 import java.util.*;
 import java.lang.reflect.*;
 import java.lang.*;
 
-import command.*;
-import parseSchema.*;
+import src.main.java.command.*;
+import src.main.java.parseSchema.SchemaInterface;
 
 public class CommandParser{
   private SchemaInterface schemaInterface;
@@ -40,7 +40,7 @@ public class CommandParser{
         String commandName = keys.next();
         String commandClassName = usableCommandMap.get(commandName);
 
-        Class commandClass = Class.forName("command." + commandClassName); // todo remove Magic number
+        Class commandClass = Class.forName("src.main.java.command." + commandClassName); // todo remove Magic number
         Constructor cs = commandClass.getConstructor(new Class[]{String.class});
 
         commandList.add((CommandInterface)cs.newInstance(commandName));
