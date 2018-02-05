@@ -1,10 +1,10 @@
 package src.main.java.Main;
 
+import org.json.simple.JSONObject;
 import src.main.java.command.CommandInterface;
 import src.main.java.inputSchema.Input;
 import src.main.java.inputSchema.JSONConfigInput;
 import src.main.java.inputSchema.ShellCommandInput;
-import org.json.simple.JSONObject;
 import src.main.java.outputSchema.Output;
 import src.main.java.outputSchema.ShellCommandOutput;
 import src.main.java.parseSchema.SpaceSchema;

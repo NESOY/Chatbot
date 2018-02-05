@@ -1,11 +1,13 @@
 package src.main.java.parser;
 
-import java.util.*;
-import java.lang.reflect.*;
-import java.lang.*;
-
 import src.main.java.command.*;
 import src.main.java.parseSchema.SchemaInterface;
+
+import java.lang.reflect.Constructor;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 public class CommandParser{
   private SchemaInterface schemaInterface;
